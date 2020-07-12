@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>T-REX RUN</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper-top"></div>
+      <div class="wrapper-game">
+        <div class="grid">
+          <div id="grid-alert">
+            <h1 id="alert-gameover">Game Over!</h1>
+            <div class="alert-finalscore">Time: 15 second(s)</div>
+            <img class="alert-gameover" src="gameover.svg" alt="gameover" />
+            <button class="btn">Play again</button>
+          </div>
+          <div class="grid-sun"></div>
+          <div class="grid-background"></div>
+          <div class="grid-parrot">
+            <img src="parrot.svg" alt="parrot" />
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-bottom"></div>
+      <div id="wrapper-currentTime"></div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

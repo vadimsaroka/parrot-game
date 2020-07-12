@@ -1,0 +1,184 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #44b544;
+}
+
+.wrapper-game {
+  position: relative;
+  display: flex;
+  height: 50%;
+  width: 100%;
+  background-color: #e8d725;
+}
+
+.wrapper-top {
+  background-image: url(top.svg);
+  height: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.wrapper-bottom {
+  background-image: url(bottom.svg);
+  height: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#wrapper-currentTime {
+  text-align: end;
+  font-size: 3rem;
+  margin-right: 2rem;
+  color: #fff;
+}
+
+.grid-sun {
+  background-image: url(sun.svg);
+  background-repeat: repeat;
+  background-size: contain;
+  height: 12rem;
+  width: 12rem;
+  position: absolute;
+  top: -8rem;
+  right: 1rem;
+  animation: spin 30s linear infinite;
+}
+
+.grid {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.grid-background {
+  background-image: url(background.svg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position-x: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6000%;
+  height: 100%;
+  animation: background 1500s linear infinite;
+}
+
+.grid-parrot {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  bottom: 0;
+  left: 20%;
+}
+
+#grid-alert {
+  font-size: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #312727;
+  display: none;
+  animation: pop-in 0.3s linear;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.abstacle {
+  position: relative;
+  width: 7rem;
+  height: 10rem;
+  bottom: 0;
+  background-image: url(obstacle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#alert-gameover {
+  margin-bottom: 2rem;
+}
+
+.alert-gameover {
+  width: 15rem;
+  margin: 3rem 0;
+}
+
+.alert-finalscore {
+}
+
+.btn {
+  font-size: 3rem;
+  border-radius: 0.4rem;
+  border: none;
+  padding: 1rem 2.5rem;
+  animation: pulsate 0.5s ease-in-out infinite both;
+  cursor: pointer;
+}
+
+@keyframes background {
+  0% {
+    transform: translateZ(0);
+  }
+  50% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
